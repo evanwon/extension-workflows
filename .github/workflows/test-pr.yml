@@ -50,7 +50,7 @@ jobs:
         }
 
     - name: Security audit (lenient)
-      if: ${{ !inputs.security-audit-strict }}
+      if: "!inputs.security-audit-strict"
       continue-on-error: true
       run: |
         npm audit --audit-level=moderate || {
